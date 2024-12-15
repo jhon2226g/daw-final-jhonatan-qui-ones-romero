@@ -28,7 +28,7 @@ public class CarRestController {
     private ICarService _CarService;
     
     @GetMapping("/all")
-    public ResponseEntity<?> getAll(@RequestParam String param) {
+    public ResponseEntity<?> getAll() {
 	try {
 	    List<CarDTO> cars = _CarService.getAll();	    
 	    return ResponseEntity.ok(cars) ;	    
